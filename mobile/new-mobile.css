@@ -642,7 +642,7 @@ div.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box), div.a-column.a-sp
 
 /* PRODUCT MODAL */
 .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
-    width: 85% !important;
+    max-width: 85vmax !important;
     max-height: 85% !important;
 }
 
