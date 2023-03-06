@@ -350,34 +350,24 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
     }
 
     /* Other */
-    #a-page > div.a-container.vvp-body > div.a-tab-container.vvp-tab-set-container > ul {
-        margin-bottom: 0px !important;
-        padding-left: 0px;
-        display: flex;
-        margin: 0 auto !important;
-    }
-
-    #a-page > div.a-container.vvp-body > div.a-tab-container.vvp-tab-set-container > ul > li {
-        width: -webkit-fill-available;
-    }
-
-    ul.a-tabs .a-tab-heading a, ul.a-tabs li a {
-        text-align: center;
-        line-height: 2.75;
-        padding: unset !important;
-    }
-
     /* Fixing pagination */
     ul.a-pagination li a, ul.a-pagination li.a-disabled {
         padding: 0.8rem 0.9rem 0.7rem 0.9rem;
     }
 
-    .a-pagination a:has(.larr) {
+    /* Removing "Previous" and "Next" text */
+    ul.a-pagination li :has(.larr), ul.a-pagination li.a-last:has(.larr), ul.a-pagination li.a-disabled:has(.larr) {
         font-size: 0px;
     }
 
-    .a-pagination a:has(.larr) {
-        padding: 1.1rem 0.6rem 1.1rem 1.1rem;
+    /* Previous button */
+    ul.a-pagination li :has(.larr), ul.a-pagination li.a-disabled:not(.a-last):has(.larr) {
+        padding: 1.35rem 0.6rem 1.35rem 1.1rem;
+    }
+
+    /* Next button */
+    .a-pagination li.a-last :has(.larr), .a-pagination li.a-last.a-disabled {
+        padding: 1.35rem 1.1rem 1.35rem 0.6rem;
     }
 
     ul.a-pagination li:first-child span.larr::before, ul.a-pagination li.a-last span.larr::after, ul.a-pagination li:last-child span.larr::after {
@@ -386,10 +376,11 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         padding: 0.4rem;
     }
 
-    .a-pagination li.a-last a:has(.larr) {
-        padding: 1.1rem 1.1rem 1.1rem 0.6rem;
+    /*
+    .a-pagination li.a-last:has(.larr) {
+        padding: 1.35rem 1.1rem 1.35rem 0.6rem;
     }
-
+    */
     ul:has(.a-disabled) > li:first-child.a-disabled:nth-last-child(2), ul > li:last-child.a-disabled:nth-last-child(2) {
         background: blue;
         display: none;
@@ -429,29 +420,6 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         grid-column: 2 / span 1;
     }
 */
-    /* Product Modal */
-    #vvp-product-details-modal--main {
-        flex-direction: column;
-    }
-
-    #vvp-product-details-img-container {
-        width: unset !important;
-        height: 150px !important;
-        display: flex !important;
-        justify-content: center !important;
-        position: relative !important;
-    }
-
-    #vvp-product-details-img-container img {
-        height: 150px !important;
-    }
-
-    /* PRODUCT MODAL */
-    .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
-        max-width: 80% !important;
-        max-height: 85% !important;
-    }
-
     /* Resources page boxes */
     .vvp-learning-resource--btn-container {
         display: flex;
@@ -488,8 +456,56 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
     }
 }
 
+/* Modal headers: 
+#2 = messages
+#3 = products
+#4 = shipping address 
+*/
+#a-popover-3 {
+    height: initial !important;
+}
+
+/* Fixing the shipping address box size */
+#a-popover-4 {
+    height: initial !important;
+}
+
 /* For phones in portrait mode */
 @media screen and (max-width: 690px) {
+    /* Adjusting the modal again */
+    .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
+        width: 85vmax !important;
+        max-width: 80% !important;
+    }
+
+    /* Making modal a decent size for product details box on phones */
+    .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height#a-popover-3 {
+        height: 85vmax !important;
+    }
+
+    /* Product Modal */
+    #vvp-product-details-modal--main {
+        flex-direction: column;
+    }
+
+    #vvp-product-details-img-container {
+        width: unset !important;
+        height: 150px !important;
+        display: flex !important;
+        justify-content: center !important;
+        position: relative !important;
+    }
+
+    #vvp-product-details-img-container img {
+        height: 150px !important;
+    }
+
+    /* PRODUCT MODAL */
+    .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
+        width: 85vmax !important;
+        max-height: 85% !important;
+    }
+
     /* Remove the table column headers */
     .vvp-reviews-table--heading-row, .vvp-orders-table--heading-row {
         display: none !important;
@@ -507,15 +523,30 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         grid-row: 1 / span 1;
     }
 
-    .vvp-reviews-table--text-col:not(:has(.a-truncate)), .vvp-orders-table--text-col:not(:has(.a-truncate)) {
+    .vvp-reviews-table--text-col:not(:has(.a-truncate, .vvp-subtitle-color)), .vvp-orders-table--text-col:not(:has(.a-truncate, .vvp-subtitle-color)) {
         text-align: center;
     }
 
-    .vvp-reviews-table--text-col:nth-child(2), .vvp-orders-table--text-col:nth-child(2) {
+    /*
+    .vvp-orders-table--image-col {
+        padding: 15px !important;
+    }
+*/
+    .vvp-reviews-table--text-col:nth-child(2), .vvp-orders-table--text-col:nth-child(2):not(:has(.vvp-subtitle-color)) {
         grid-column: 2 / span 2;
         padding: unset;
         height: 80%;
         overflow: hidden;
+        margin-top: 5px;
+    }
+
+    /* For products that have been deleted */
+    .vvp-reviews-table--text-col:nth-child(2):has(.vvp-subtitle-color), .vvp-orders-table--text-col:nth-child(2):has(.vvp-subtitle-color) {
+        grid-column: 2 / span 1;
+        padding: unset;
+        height: 80%;
+        overflow: hidden;
+        margin-top: 5px;
     }
 
     .a-truncate-full.a-offscreen {
@@ -605,17 +636,10 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         display: flex;
     }
 }*/
-/* PRODUCT MODAL */
-.a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
-    width: 85vmax !important;
-    max-height: 85% !important;
-}
-
 /* Maybe use this for phones in landscape (horizontal) and tablets */
 @media screen and (max-width: 790px) {
     .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
         width: 85vmax !important;
-        max-height: 85% !important;
         max-width: 80% !important;
     }
 
@@ -630,7 +654,6 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         padding-left: 0px;
         display: flex;
         margin: 0 auto !important;
-        width: 95.75%;
     }
 
     /* Centering the Vine Items, Reviews, Orders, Account, and Resources tabs for a more mobile appearance */
