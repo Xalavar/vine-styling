@@ -643,6 +643,14 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         max-width: 80% !important;
     }
 
+    #vvp-product-details-modal--hero-image {
+        height: 75%;
+    }
+
+    #vvp-product-details-img-container {
+        width: unset;
+    }
+
     /* Fixing the Messages layout */
     td.vvp-messages-expander > div[data-message-id] > .a-expander-content.a-expander-inline-content.a-expander-inner.a-expander-content-expanded {
         margin-left: -130px;
