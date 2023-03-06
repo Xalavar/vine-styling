@@ -163,7 +163,7 @@ body {
 
 #a-popover-content-3 {
     /*height: fit-content !important;*/
-    height: calc(100% - 130px) !important;
+    /*height: calc(100% - 130px) !important;*/
 }
 
 .a-popover-modal-fixed-height .a-popover-footer {
