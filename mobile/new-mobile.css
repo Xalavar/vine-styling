@@ -33,7 +33,8 @@ body {
     padding: 0px !important;
 }
 
-.vvp-header-links-container a, .a-tab-heading a {
+.vvp-header-links-container a,
+.a-tab-heading a {
     /*font-size: 1.5vmax !important;*/
 }
 
@@ -53,7 +54,8 @@ body {
     margin-top: 0.5rem !important;
 }
 
-.vvp-item-tile, .a-tab-content {
+.vvp-item-tile,
+.a-tab-content {
     border: none !important;
 }
 
@@ -66,7 +68,8 @@ body {
     display: none;
 }
 
-#vvp-search-button, #vvp-search-text-input {
+#vvp-search-button,
+#vvp-search-text-input {
     border-radius: 0rem !important;
 }
 
@@ -75,11 +78,13 @@ body {
 }
 
 /* PRODUCT AND REVIEW PAGES */
-.vvp-reviews-table td.vvp-reviews-table--image-col img, .vvp-orders-table td.vvp-orders-table--image-col img {
+.vvp-reviews-table td.vvp-reviews-table--image-col img,
+.vvp-orders-table td.vvp-orders-table--image-col img {
     height: 75px;
 }
 
-.vvp-reviews-table--actions-col, .vvp-orders-table--actions-col {
+.vvp-reviews-table--actions-col,
+.vvp-orders-table--actions-col {
     width: 100% !important;
     display: flex !important;
     align-items: center !important;
@@ -122,15 +127,6 @@ body {
     zoom: 75%;
 }
 */
-#vvp-product-details-modal--tax-value {
-    position: fixed !important;
-    top: 20px !important;
-    z-index: 100;
-    left: 18px;
-    display: inline-flex;
-    visibility: visible !important;
-}
-
 /**** ==== EVERYTHING BELOW IS MINE ==== ****/
 .a-button-dropdown .a-button-text {
     z-index: unset;
@@ -172,13 +168,14 @@ body {
 }
 
 /* ETV bug fix? */
+/*
 #vvp-product-details-modal--tax-value {
     position: unset !important;
     top: unset !important;
     z-index: unset !important;
     left: unset !important;
 }
-
+*/
 #vvp-product-details-modal--limited-quantity {
     position: unset !important;
 }
@@ -189,7 +186,8 @@ body {
     height: auto;
 }
 
-div.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box), div.a-column.a-span12.a-ws-span6:has(#vvp-vine-activity-metrics-box) {
+div.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box),
+div.a-column.a-span12.a-ws-span6:has(#vvp-vine-activity-metrics-box) {
     /*width: 49%;*/
 }
 
@@ -214,7 +212,10 @@ div.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box), div.a-column.a-sp
 }
 
 /* Makes the two boxes large enough to contain all child elements */
-#vvp-current-status-box .a-box-inner, #vvp-vine-activity-metrics-box .a-box-inner, #vvp-vine-activity-metrics-box, #vvp-current-status-box {
+#vvp-current-status-box .a-box-inner,
+#vvp-vine-activity-metrics-box .a-box-inner,
+#vvp-vine-activity-metrics-box,
+#vvp-current-status-box {
     height: fit-content;
 }
 
@@ -238,7 +239,8 @@ display: table;
 .vvp-account-box {
     padding: unset;
 }*/
-.a-ws div.a-column, div.a-column {
+.a-ws div.a-column,
+div.a-column {
     margin-right: unset;
 }
 
@@ -326,7 +328,9 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         margin: 1rem 0rem !important;
     }
 
-    #vvp-browse-nodes-container:not(:hover) p, #vvp-browse-nodes-container:not(:hover) .parent-node, #vvp-browse-nodes-container:not(:hover) .child-node {
+    #vvp-browse-nodes-container:not(:hover) p,
+    #vvp-browse-nodes-container:not(:hover) .parent-node,
+    #vvp-browse-nodes-container:not(:hover) .child-node {
         display: none !important;
     }
 
@@ -345,32 +349,40 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
     }
 
     /* Product modal */
-    #vvp-product-details-img-container, #vvp-product-details-img-container img {
+    #vvp-product-details-img-container,
+    #vvp-product-details-img-container img {
         height: 75px;
     }
 
     /* Other */
     /* Fixing pagination */
-    ul.a-pagination li a, ul.a-pagination li.a-disabled {
+    ul.a-pagination li a,
+    ul.a-pagination li.a-disabled {
         padding: 0.8rem 0.9rem 0.7rem 0.9rem;
     }
 
     /* Removing "Previous" and "Next" text */
-    ul.a-pagination li :has(.larr), ul.a-pagination li.a-last:has(.larr), ul.a-pagination li.a-disabled:has(.larr) {
+    ul.a-pagination li :has(.larr),
+    ul.a-pagination li.a-last:has(.larr),
+    ul.a-pagination li.a-disabled:has(.larr) {
         font-size: 0px;
     }
 
     /* Previous button */
-    ul.a-pagination li :has(.larr), ul.a-pagination li.a-disabled:not(.a-last):has(.larr) {
+    ul.a-pagination li :has(.larr),
+    ul.a-pagination li.a-disabled:not(.a-last):has(.larr) {
         padding: 1.35rem 0.6rem 1.35rem 1.1rem;
     }
 
     /* Next button */
-    .a-pagination li.a-last :has(.larr), .a-pagination li.a-last.a-disabled {
+    .a-pagination li.a-last :has(.larr),
+    .a-pagination li.a-last.a-disabled {
         padding: 1.35rem 1.1rem 1.35rem 0.6rem;
     }
 
-    ul.a-pagination li:first-child span.larr::before, ul.a-pagination li.a-last span.larr::after, ul.a-pagination li:last-child span.larr::after {
+    ul.a-pagination li:first-child span.larr::before,
+    ul.a-pagination li.a-last span.larr::after,
+    ul.a-pagination li:last-child span.larr::after {
         left: unset;
         top: unset;
         padding: 0.4rem;
@@ -381,7 +393,8 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         padding: 1.35rem 1.1rem 1.35rem 0.6rem;
     }
     */
-    ul:has(.a-disabled) > li:first-child.a-disabled:nth-last-child(2), ul > li:last-child.a-disabled:nth-last-child(2) {
+    ul:has(.a-disabled) > li:first-child.a-disabled:nth-last-child(2),
+    ul > li:last-child.a-disabled:nth-last-child(2) {
         background: blue;
         display: none;
     }
@@ -430,7 +443,8 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         display: flex;
     }
 
-    #vvp-resources-page .a-ws div.a-column, #vvp-resources-page div.a-column {
+    #vvp-resources-page .a-ws div.a-column,
+    #vvp-resources-page div.a-column {
         min-height: 21.1rem;
     }
 
@@ -441,6 +455,36 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
     img[src="https://m.media-amazon.com/images/G/01/Vine/VoicePortal/man-laptop.svg"] {
         margin-top: -20px;
     }
+
+    /* Moving ETV and Limited Quantity below the Back and Request product buttons */
+    #vvp-product-details-info-container:has(#vvp-product-details-modal--limited-quantity[style="display: none;"]) #vvp-product-details-modal--tax-value {
+        position: fixed !important;
+        bottom: 5px !important;
+        z-index: 100;
+        left: 18px;
+        display: inline-flex;
+        visibility: visible !important;
+    }
+
+    #vvp-product-details-info-container:not(:has(#vvp-product-details-modal--limited-quantity[style="display: none;"])) #vvp-product-details-modal--tax-value {
+        position: fixed !important;
+        bottom: 15px !important;
+        z-index: 100;
+        left: 18px;
+        display: inline-flex;
+        visibility: visible !important;
+    }
+
+    #vvp-product-details-modal--limited-quantity {
+        position: fixed !important;
+        bottom: -5px !important;
+        z-index: 100;
+        left: 18px;
+        display: inline-flex;
+        visibility: visible !important;
+    }
+
+
 }
 
 @media screen and (max-width: 578px) {
@@ -451,7 +495,8 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         justify-content: center !important;
     }
 
-    #vvp-logo-link > img, #vvp-about-vine-page.vvp-about-page > img {
+    #vvp-logo-link > img,
+    #vvp-about-vine-page.vvp-about-page > img {
         margin-bottom: 10px;
     }
 }
@@ -507,23 +552,27 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
     }
 
     /* Remove the table column headers */
-    .vvp-reviews-table--heading-row, .vvp-orders-table--heading-row {
+    .vvp-reviews-table--heading-row,
+    .vvp-orders-table--heading-row {
         display: none !important;
     }
 
     /* Making reviews and order pages more viewable in portrait mode */
-    .vvp-reviews-table--row, .vvp-orders-table--row {
+    .vvp-reviews-table--row,
+    .vvp-orders-table--row {
         display: grid;
         grid-template-columns: repeat(3, auto);
         align-items: center;
         gap: 0px;
     }
 
-    .vvp-reviews-table--row .vvp-reviews-table--image-col, .vvp-orders-table--row .vvp-orders-table--image-col {
+    .vvp-reviews-table--row .vvp-reviews-table--image-col,
+    .vvp-orders-table--row .vvp-orders-table--image-col {
         grid-row: 1 / span 1;
     }
 
-    .vvp-reviews-table--text-col:not(:has(.a-truncate, .vvp-subtitle-color)), .vvp-orders-table--text-col:not(:has(.a-truncate, .vvp-subtitle-color)) {
+    .vvp-reviews-table--text-col:not(:has(.a-truncate, .vvp-subtitle-color)),
+    .vvp-orders-table--text-col:not(:has(.a-truncate, .vvp-subtitle-color)) {
         text-align: center;
     }
 
@@ -532,7 +581,8 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         padding: 15px !important;
     }
 */
-    .vvp-reviews-table--text-col:nth-child(2), .vvp-orders-table--text-col:nth-child(2):not(:has(.vvp-subtitle-color)) {
+    .vvp-reviews-table--text-col:nth-child(2),
+    .vvp-orders-table--text-col:nth-child(2):not(:has(.vvp-subtitle-color)) {
         grid-column: 2 / span 2;
         padding: unset;
         height: 80%;
@@ -541,7 +591,8 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
     }
 
     /* For products that have been deleted */
-    .vvp-reviews-table--text-col:nth-child(2):has(.vvp-subtitle-color), .vvp-orders-table--text-col:nth-child(2):has(.vvp-subtitle-color) {
+    .vvp-reviews-table--text-col:nth-child(2):has(.vvp-subtitle-color),
+    .vvp-orders-table--text-col:nth-child(2):has(.vvp-subtitle-color) {
         grid-column: 2 / span 1;
         padding: unset;
         height: 80%;
@@ -557,13 +608,17 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         display: none;
     }
 
-    .vvp-reviews-table--text-col:nth-child(3), .vvp-reviews-table--text-col:nth-child(4), .vvp-orders-table--text-col:nth-child(3), .vvp-orders-table--text-col:nth-child(4) {
+    .vvp-reviews-table--text-col:nth-child(3),
+    .vvp-reviews-table--text-col:nth-child(4),
+    .vvp-orders-table--text-col:nth-child(3),
+    .vvp-orders-table--text-col:nth-child(4) {
         grid-row: 2;
         grid-column: 1 / span 3;
         padding: 0px;
     }
 
-    .vvp-reviews-table--actions-col, .vvp-orders-table--actions-col {
+    .vvp-reviews-table--actions-col,
+    .vvp-orders-table--actions-col {
         grid-column: 1 / span 3;
         grid-row: 3;
         align-items: center !important;
@@ -577,11 +632,15 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         height: auto !important;
     }
 
-    .vvp-reviews-table--text-col[data-order-timestamp], .vvp-orders-table--text-col[data-order-timestamp] {
+    .vvp-reviews-table--text-col[data-order-timestamp],
+    .vvp-orders-table--text-col[data-order-timestamp] {
         margin-right: 50%;
     }
 
-    .vvp-reviews-table--text-col[data-review-content], .vvp-reviews-table--text-col:nth-child(4), .vvp-orders-table--text-col[data-review-content], .vvp-orders-table--text-col:nth-child(4) {
+    .vvp-reviews-table--text-col[data-review-content],
+    .vvp-reviews-table--text-col:nth-child(4),
+    .vvp-orders-table--text-col[data-review-content],
+    .vvp-orders-table--text-col:nth-child(4) {
         margin-left: 50%;
     }
 
@@ -597,7 +656,8 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         font-weight: 700;
     }
 
-    .vvp-reviews-table--text-col:nth-child(4)::before, .vvp-reviews-table--text-col[data-review-content]::before {
+    .vvp-reviews-table--text-col:nth-child(4)::before,
+    .vvp-reviews-table--text-col[data-review-content]::before {
         content: "Status: ";
         font-weight: 700;
     }
@@ -613,7 +673,8 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
     margin-bottom: 20px;
 }
 
-#vvp-current-status-box, #vvp-vine-activity-metrics-box {
+#vvp-current-status-box,
+#vvp-vine-activity-metrics-box {
     display: flex;
     margin: 0 auto;
 }
@@ -669,7 +730,8 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         width: -webkit-fill-available;
     }
 
-    ul.a-tabs .a-tab-heading a, ul.a-tabs li a {
+    ul.a-tabs .a-tab-heading a,
+    ul.a-tabs li a {
         text-align: center;
         line-height: 2.75;
         padding: unset !important;
@@ -784,7 +846,8 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
 
     /* Accounts page */
     /* Fixes a weird stretching issue with the two boxes */
-    div.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box), div.a-column.a-span12.a-ws-span6:has(#vvp-vine-activity-metrics-box) {
+    div.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box),
+    div.a-column.a-span12.a-ws-span6:has(#vvp-vine-activity-metrics-box) {
         width: 49%;
     }
 
@@ -804,7 +867,8 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
 }
 
 /* The following either work in all types of mobile devices, or haven't been tested yet */
-ul.a-pagination, ul.a-pagination li {
+ul.a-pagination,
+ul.a-pagination li {
     width: unset;
 }
 
