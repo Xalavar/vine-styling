@@ -458,29 +458,30 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
 
     /* Moving ETV and Limited Quantity below the Back and Request product buttons */
     #vvp-product-details-info-container:has(#vvp-product-details-modal--limited-quantity[style="display: none;"]) #vvp-product-details-modal--tax-value {
-        position: absolute !important;
-        /*bottom: 5px !important;
+        position: fixed !important;
+        margin: 0 auto;
+        bottom: 5px !important;
         z-index: 100;
         left: 18px;
-        display: flex;*/
+        display: flex;
         visibility: visible !important;
     }
 
     #vvp-product-details-info-container:not(:has(#vvp-product-details-modal--limited-quantity[style="display: none;"])) #vvp-product-details-modal--tax-value {
         position: absolute !important;
-        /*bottom: 15px !important;
+        bottom: 15px !important;
         z-index: 100;
         left: 18px;
-        display: flex;*/
+        display: flex;
         visibility: visible !important;
     }
 
     #vvp-product-details-modal--limited-quantity {
         position: absolute !important;
-        /*bottom: -5px !important;
+        bottom: -5px !important;
         z-index: 100;
         left: 18px;
-        display: flex;*/
+        display: flex;
         visibility: visible !important;
     }
 
