@@ -138,10 +138,11 @@
 
     /* PRODUCT MODAL */
     .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
+        /*
         top: 50% !important;
         left: 50% !important;
+        transform: translate(-50%, -50%) !important;*/
         padding: 0px !important;
-        transform: translate(-50%, -50%) !important;
     }
 
     .a-popover-modal .a-popover-inner {
@@ -463,7 +464,7 @@
         #vvp-product-details-info-container:has(#vvp-product-details-modal--limited-quantity[style="display: none;"]) #vvp-product-details-modal--tax-value {
             position: absolute !important;
             padding-top: 0px;
-            top: 500px !important;
+            top: 530px !important;
             z-index: 1000;
             display: flex;
         }
@@ -508,10 +509,11 @@
     }
 
     /* Fixing the shipping address box size */
+    /*
     #a-popover-4 {
         height: initial !important;
     }
-
+*/
     /* For phones in portrait mode */
     @media screen and (max-width: 690px) {
         /* Adjusting the modal again */
