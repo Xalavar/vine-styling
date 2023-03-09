@@ -449,17 +449,11 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
     .a-expander-partial-collapse-header {
         position: sticky;
     }
-
-    /*
-    .a-popover-footer {
-        background: transparent;
-    }
-    */
-    /*
+    
     #vvp-product-details-info-container, .a-popover-wrapper, #a-popover-3, .a-modal-scroller.a-declarative {
         transform-style: preserve-3d;
     }
-*/
+
     #vvp-product-details-info-container:has(#vvp-product-details-modal--limited-quantity[style="display: none;"]) #vvp-product-details-modal--tax-value {
         position: absolute !important;
         padding-top: 0px;
