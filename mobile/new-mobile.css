@@ -441,6 +441,7 @@
             /*height: inherit !important;*/
             overflow-y: scroll;
         }
+
         /*
         .a-popover-modal-fixed-height .a-popover-footer {
             bottom: unset;
@@ -615,7 +616,7 @@
         }
 
         .a-truncate {
-            max-height: 90px !important;
+            max-height: 80px !important;
         }
 
         span.a-truncate-cut {
