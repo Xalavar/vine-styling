@@ -463,7 +463,7 @@
         #vvp-product-details-info-container:has(#vvp-product-details-modal--limited-quantity[style="display: none;"]) #vvp-product-details-modal--tax-value {
             position: absolute !important;
             padding-top: 0px;
-            top: 530px !important;
+            top: 500px !important;
             z-index: 1000;
             display: flex;
         }
