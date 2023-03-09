@@ -442,8 +442,9 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
     }
 
     .a-popover-modal-fixed-height .a-popover-footer {
-        bottom: unset;
-    }
+            bottom: unset;
+            background: transparent;
+     }
 
     .a-expander-partial-collapse-header {
         position: sticky;
