@@ -457,13 +457,12 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
     }
 
     /* Moving ETV and Limited Quantity below the Back and Request product buttons */
-    #vvp-product-details-info-container {
+    #vvp-product-details-info-container, #a-popover-3 {
         transform-style: preserve-3d;
     }
     
     #vvp-product-details-info-container:has(#vvp-product-details-modal--limited-quantity[style="display: none;"]) #vvp-product-details-modal--tax-value {
         position: absolute !important;
-        margin: 0 auto;
         bottom: 5px !important;
         z-index: 100;
         left: 18px;
