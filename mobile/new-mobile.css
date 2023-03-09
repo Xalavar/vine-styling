@@ -457,7 +457,7 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
     }
 
     /* Moving ETV and Limited Quantity below the Back and Request product buttons */
-    #vvp-product-details-info-container, #a-popover-content-3 {
+    #vvp-product-details-info-container, .a-popover-wrapper {
         transform-style: preserve-3d;
     }
     
