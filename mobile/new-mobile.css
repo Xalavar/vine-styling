@@ -1,421 +1,844 @@
-/*** NOTES: 
-
-* The purpose of this is to make the Vine portion of Amazon work properly across various different mobile devices and tablets. 
-* Credits: 
-Me
-Thorvarium
-***/
-body {
-    padding-right: 0px !important;
-}
-
-#nav-main {
-    display: none;
-}
-
-.a-tabs {
-    margin: 0px !important;
-}
-
-.a-tabs li a {
-    padding: 1rem !important;
-}
-
-.nav-mobile.nav-ftr-batmobile {
-    display: none;
-}
-
-.vvp-tab-set-container [data-a-name="vine-items"] .a-box-inner .vvp-tab-content .vvp-items-button-and-search-container {
-    margin: 0px !important;
-}
-
-.vvp-body {
-    padding: 0px !important;
-}
-
-.vvp-header-links-container a, .a-tab-heading a {
-    /*font-size: 1.5vmax !important;*/
-}
-
-#vvp-items-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, auto)) !important;
-}
-
-#vvp-items-grid .vvp-item-tile .vvp-item-tile-content {
-    width: 100px !important;
-}
-
-#vvp-items-grid .vvp-item-tile .vvp-item-tile-content > * {
-    margin: 0 !important;
-}
-
-#vvp-items-grid .vvp-item-tile .vvp-item-tile-content > img {
-    margin-top: 0.5rem !important;
-}
-
-.vvp-item-tile, .a-tab-content {
-    border: none !important;
-}
-
-#vvp-items-grid .vvp-item-tile .vvp-item-tile-content > .vvp-item-product-title-container {
-    height: 40px !important;
-}
-
-/* SEARCH BUTTON */
-#vvp-beta-tag {
-    display: none;
-}
-
-#vvp-search-button, #vvp-search-text-input {
-    border-radius: 0rem !important;
-}
-
-#vvp-search-button #vvp-search-button-announce {
-    line-height: 1 !important;
-}
-
-/* PRODUCT AND REVIEW PAGES */
-.vvp-reviews-table td.vvp-reviews-table--image-col img, .vvp-orders-table td.vvp-orders-table--image-col img {
-    height: 75px;
-}
-
-.vvp-reviews-table--actions-col, .vvp-orders-table--actions-col {
-    width: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-}
-
-/* Item grid */
-#vvp-items-grid {
-    grid-template-columns: repeat(auto-fill, minmax(95px, auto)) !important;
-}
-
-/*
-#vvp-items-grid {
-    grid-template-columns: repeat(auto-fill, minmax(12%, auto)) !important;
-}*/
-#vvp-items-grid .vvp-item-tile .vvp-item-tile-content {
-    width: 90px !important;
-}
-
-#vvp-items-grid .vvp-item-tile .vvp-item-tile-content > .vvp-item-product-title-container {
-    height: 40px !important;
-    font-size: 10px !important;
-}
-
-#vvp-items-grid .vvp-item-tile .vvp-item-tile-content > .vvp-item-product-title-container .a-truncate {
-    max-height: 40px !important;
-}
-
-/* Trying something different for items */
-/*
-#vvp-items-grid, #vvp-items-grid .vvp-item-tile {
-    display: inline-table;
-}
-
-#vvp-items-grid .vvp-item-tile {
-    width: 100px;
-    zoom: 110%;
-}
-
-.vvp-item-tile-content > img {
-    zoom: 75%;
-}
-*/
-/**** ==== EVERYTHING BELOW IS MINE ==== ****/
-.a-button-dropdown .a-button-text {
-    z-index: unset;
-}
-
-.a-popover-footer {
-    background: inherit;
-    margin-bottom: -2px;
-}
-
-.vvp-product-details-info-container {
-    padding-bottom: 50px;
-}
-
-/* PRODUCT MODAL */
-.a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
-    top: 50% !important;
-    left: 50% !important;
-    padding: 0px !important;
-    transform: translate(-50%, -50%) !important;
-}
-
-.a-popover-modal .a-popover-inner {
-    padding: 1.6rem 2.4rem;
-}
-
-.a-popover-modal .a-popover-wrapper {
-    /*height: fit-content;*/
-}
-
-#a-popover-content-3 {
-    /*height: fit-content !important;*/
-    /*height: calc(100% - 130px) !important;*/
-}
-
-/*
-.a-popover-modal-fixed-height .a-popover-footer {
-    position: unset;
-    bottom: unset;
-}
-*/
-/* ETV bug fix? */
-/*
-#vvp-product-details-modal--tax-value {
-    position: unset !important;
-    top: unset !important;
-    z-index: unset !important;
-    left: unset !important;
-}
-*/
-#vvp-product-details-modal--limited-quantity {
-    position: unset !important;
-}
-
-/* Accounts page */
-#vvp-current-status-box {
-    display: inline-table;
-    height: auto;
-}
-
-div.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box), div.a-column.a-span12.a-ws-span6:has(#vvp-vine-activity-metrics-box) {
-    /*width: 49%;*/
-}
-
-/*
-.vvp-direct-child-spacing > .a-row {
-    display: flex;
-}
-*/
-/*Centering tier */
-/*
-.a-box.a-color-alternate-background.vvp-account-box .a-box-inner > div {
-  margin-left: auto;
-        margin-right: auto;
-}
-
-.a-box.a-color-alternate-background.vvp-account-box .a-box-inner > div > h1.vvp-aqua {
-  margin: 0 auto;
-}
-    */
-#vvp-current-status-box {
-    display: inline-table;
-}
-
-/* Makes the two boxes large enough to contain all child elements */
-#vvp-current-status-box .a-box-inner, #vvp-vine-activity-metrics-box .a-box-inner, #vvp-vine-activity-metrics-box, #vvp-current-status-box {
-    height: fit-content;
-}
-
-#vvp-vine-activity-metrics-box {
-    display: inline-table;
-}
-
-/*
-#vvp-current-status-box h1.vvp-aqua {
-display: table;
-}
-
-.a-row .a-span6, .a-ws .a-row .a-ws-span6 {
-    width: unset;
-}*/
-#vvp-review-button-container {
-    margin: 0 auto;
-}
-
-/*
-.vvp-account-box {
-    padding: unset;
-}*/
-.a-ws div.a-column, div.a-column {
-    margin-right: unset;
-}
-
-.animated-progress {
-    width: auto;
-}
-
-/* Centering current tier */
-#vvp-current-status-box > .a-box-inner > div:nth-child(1) {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* Centering date joined and re-evaluation date */
-/*
-#vvp-member-since-display, #vvp-evaluation-date-display, #vvp-evaluation-date-tooltip-trigger {
-    text-align: center;
-}
-
-#vvp-member-since-display > strong::before, span#vvp-evaluation-date-string > strong::before {
-    content: "\A";
-    white-space: pre;
-}
-
-div.a-column.a-span6:has(#vvp-gold-status-perks-display), div.a-column.a-span6:has(#vvp-you-are-awesome-display) {
-    width: 100%;
-}
-
-div.a-column.a-span6:has(#vvp-you-are-awesome-display) {
-    margin-top: 10px;
-}*/
-/* Fixing alignment of tooltip bubble */
-div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
-    left: auto !important;
-}
-
-.vvp-account-box {
-    padding: 10px;
-}
-
-/*
-#vvp-current-status-box > .a-box-inner > .a-row > .a-column.a-span6.a-span-last {
-    margin-right: 26%;
-}*/
-/* Fixing opt out button size */
-#vvp-opt-out-of-vine-button {
-    display: inline-block;
-}
-
-#vvp-vine-agreement-link {
-    margin-left: 10px;
-}
-
-/*
-#vvp-browse-nodes-container > .parent-node {
-    margin: 0 auto;
-}
-*/
-/* Item "See Details" button */
-.vvp-details-btn .a-button-text {
-    padding: 0.5vmax;
-    font-size: 15px;
-}
-
-/**** === Device-Specific Changes === ****/
-/* Phones in portrait (vertical) mode */
-@media screen and (max-width: 525px) {
-    /* Account page */
-    #vvp-tax-information-container .a-section {
-        margin-right: unset;
+@-moz-document url-prefix("https://www.amazon.com/vine") {
+    /*** NOTES: 
+    
+    * The purpose of this is to make the Vine portion of Amazon work properly across various different mobile devices and tablets. 
+    * Credits: 
+    Me
+    Thorvarium
+    ***/
+    body {
+        padding-right: 0px !important;
     }
 
-    /* Pagination fix */
-    /*
-    ul.a-pagination li a, ul.a-pagination li.a-disabled {
-        padding: 0.8rem 1.1rem 0.7rem 1.2rem;
-    }
-*/
-    /* COLLAPSIBLE CATEGORIES */
-    .vvp-items-container {
-        margin: 0rem !important;
-    }
-
-    #vvp-browse-nodes-container {
-        margin: 1rem 0rem !important;
-    }
-
-    #vvp-browse-nodes-container:not(:hover) p, #vvp-browse-nodes-container:not(:hover) .parent-node, #vvp-browse-nodes-container:not(:hover) .child-node {
-        display: none !important;
-    }
-
-    #vvp-browse-nodes-container:not(:hover):before {
-        content: "Filter Categories";
-        padding: 0.5rem;
-        line-height: 3rem;
-        color: #FFF;
-        /*
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 1;*/
-    }
-
-    #vvp-browse-nodes-container:not(:hover) {
-        background-color: #303333;
-    }
-
-    /* Product modal */
-    #vvp-product-details-img-container, #vvp-product-details-img-container img {
-        height: 75px;
-    }
-
-    /* Other */
-    /* Fixing pagination */
-    ul.a-pagination li a, ul.a-pagination li.a-disabled {
-        padding: 0.8rem 0.9rem 0.7rem 0.9rem;
-    }
-
-    /* Removing "Previous" and "Next" text */
-    ul.a-pagination li :has(.larr), ul.a-pagination li.a-last:has(.larr), ul.a-pagination li.a-disabled:has(.larr) {
-        font-size: 0px;
-    }
-
-    /* Previous button */
-    ul.a-pagination li :has(.larr), ul.a-pagination li.a-disabled:not(.a-last):has(.larr) {
-        padding: 1.35rem 0.6rem 1.35rem 1.1rem;
-    }
-
-    /* Next button */
-    .a-pagination li.a-last :has(.larr), .a-pagination li.a-last.a-disabled {
-        padding: 1.35rem 1.1rem 1.35rem 0.6rem;
-    }
-
-    ul.a-pagination li:first-child span.larr::before, ul.a-pagination li.a-last span.larr::after, ul.a-pagination li:last-child span.larr::after {
-        left: unset;
-        top: unset;
-        padding: 0.4rem;
-    }
-
-    /*
-    .a-pagination li.a-last:has(.larr) {
-        padding: 1.35rem 1.1rem 1.35rem 0.6rem;
-    }
-    */
-    ul:has(.a-disabled) > li:first-child.a-disabled:nth-last-child(2), ul > li:last-child.a-disabled:nth-last-child(2) {
-        background: blue;
+    #nav-main {
         display: none;
     }
 
-    /* Categories */
+    .a-tabs {
+        margin: 0px !important;
+    }
+
+    .a-tabs li a {
+        padding: 1rem !important;
+    }
+
+    .nav-mobile.nav-ftr-batmobile {
+        display: none;
+    }
+
+    .vvp-tab-set-container [data-a-name="vine-items"] .a-box-inner .vvp-tab-content .vvp-items-button-and-search-container {
+        margin: 0px !important;
+    }
+
+    .vvp-body {
+        padding: 0px !important;
+    }
+
+    .vvp-header-links-container a, .a-tab-heading a {
+        /*font-size: 1.5vmax !important;*/
+    }
+
+    #vvp-items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, auto)) !important;
+    }
+
+    #vvp-items-grid .vvp-item-tile .vvp-item-tile-content {
+        width: 100px !important;
+    }
+
+    #vvp-items-grid .vvp-item-tile .vvp-item-tile-content > * {
+        margin: 0 !important;
+    }
+
+    #vvp-items-grid .vvp-item-tile .vvp-item-tile-content > img {
+        margin-top: 0.5rem !important;
+    }
+
+    .vvp-item-tile, .a-tab-content {
+        border: none !important;
+    }
+
+    #vvp-items-grid .vvp-item-tile .vvp-item-tile-content > .vvp-item-product-title-container {
+        height: 40px !important;
+    }
+
+    /* SEARCH BUTTON */
+    #vvp-beta-tag {
+        display: none;
+    }
+
+    #vvp-search-button, #vvp-search-text-input {
+        border-radius: 0rem !important;
+    }
+
+    #vvp-search-button #vvp-search-button-announce {
+        line-height: 1 !important;
+    }
+
+    /* PRODUCT AND REVIEW PAGES */
+    .vvp-reviews-table td.vvp-reviews-table--image-col img, .vvp-orders-table td.vvp-orders-table--image-col img {
+        height: 75px;
+    }
+
+    .vvp-reviews-table--actions-col, .vvp-orders-table--actions-col {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* Item grid */
+    #vvp-items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(95px, auto)) !important;
+    }
+
     /*
-    #vvp-browse-nodes-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 0px 10px;
+    #vvp-items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(12%, auto)) !important;
+    }*/
+    #vvp-items-grid .vvp-item-tile .vvp-item-tile-content {
+        width: 90px !important;
     }
 
-    #vvp-browse-nodes-container > p {
-        grid-column: 1 / span 2;
-        grid-row: 1 / span 1;
+    #vvp-items-grid .vvp-item-tile .vvp-item-tile-content > .vvp-item-product-title-container {
+        height: 40px !important;
+        font-size: 10px !important;
     }
 
-    #vvp-browse-nodes-container, #vvp-browse-nodes-container .parent-node, #vvp-browse-nodes-container .child-node {
-        width: unset !important;
+    #vvp-items-grid .vvp-item-tile .vvp-item-tile-content > .vvp-item-product-title-container .a-truncate {
+        max-height: 40px !important;
     }
 
-    #vvp-browse-nodes-container:has(.child-node) {
-        grid-auto-flow: dense;
+    /* Trying something different for items */
+    /*
+    #vvp-items-grid, #vvp-items-grid .vvp-item-tile {
+        display: inline-table;
+    }
+    
+    #vvp-items-grid .vvp-item-tile {
+        width: 100px;
+        zoom: 110%;
+    }
+    
+    .vvp-item-tile-content > img {
+        zoom: 75%;
+    }
+    */
+    /**** ==== EVERYTHING BELOW IS MINE ==== ****/
+    .a-button-dropdown .a-button-text {
+        z-index: unset;
     }
 
-    .parent-node {
-        grid-column: 1 / span 2;
+    .a-popover-footer {
+        background: inherit;
+        margin-bottom: -2px;
     }
 
-    .parent-node:has(a.selectedNode) {
-        grid-column: 2 / span 1;
-        grid-row: 1 / span 1;
+    .vvp-product-details-info-container {
+        padding-bottom: 50px;
     }
 
-    .child-node {
-        grid-column: 2 / span 1;
+    /* PRODUCT MODAL */
+    .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
+        top: 50% !important;
+        left: 50% !important;
+        padding: 0px !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .a-popover-modal .a-popover-inner {
+        padding: 1.6rem 2.4rem;
+    }
+
+    .a-popover-modal .a-popover-wrapper {
+        /*height: fit-content;*/
+    }
+
+    #a-popover-content-3 {
+        /*height: fit-content !important;*/
+        /*height: calc(100% - 130px) !important;*/
+    }
+
+    /*
+    .a-popover-modal-fixed-height .a-popover-footer {
+        position: unset;
+        bottom: unset;
     }
 */
-    /* Resources page boxes */
-    .vvp-learning-resource--btn-container {
+    /* ETV bug fix? */
+    /*
+    #vvp-product-details-modal--tax-value {
+        position: unset !important;
+        top: unset !important;
+        z-index: unset !important;
+        left: unset !important;
+    }
+*/
+    #vvp-product-details-modal--limited-quantity {
+        position: unset !important;
+    }
+
+    /* Accounts page */
+    #vvp-current-status-box {
+        display: inline-table;
+        height: auto;
+    }
+
+    div.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box), div.a-column.a-span12.a-ws-span6:has(#vvp-vine-activity-metrics-box) {
+        /*width: 49%;*/
+    }
+
+    /*
+    .vvp-direct-child-spacing > .a-row {
         display: flex;
+    }
+*/
+    /*Centering tier */
+    /*
+    .a-box.a-color-alternate-background.vvp-account-box .a-box-inner > div {
+      margin-left: auto;
+            margin-right: auto;
+    }
+
+    .a-box.a-color-alternate-background.vvp-account-box .a-box-inner > div > h1.vvp-aqua {
+      margin: 0 auto;
+    }
+        */
+    #vvp-current-status-box {
+        display: inline-table;
+    }
+
+    /* Makes the two boxes large enough to contain all child elements */
+    #vvp-current-status-box .a-box-inner, #vvp-vine-activity-metrics-box .a-box-inner, #vvp-vine-activity-metrics-box, #vvp-current-status-box {
+        height: fit-content;
+    }
+
+    #vvp-vine-activity-metrics-box {
+        display: inline-table;
+    }
+
+    /*
+    #vvp-current-status-box h1.vvp-aqua {
+    display: table;
+}
+
+    .a-row .a-span6, .a-ws .a-row .a-ws-span6 {
+        width: unset;
+    }*/
+    #vvp-review-button-container {
+        margin: 0 auto;
+    }
+
+    /*
+    .vvp-account-box {
+        padding: unset;
+    }*/
+    .a-ws div.a-column, div.a-column {
+        margin-right: unset;
+    }
+
+    .animated-progress {
+        width: auto;
+    }
+
+    /* Centering current tier */
+    #vvp-current-status-box > .a-box-inner > div:nth-child(1) {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    /* Centering date joined and re-evaluation date */
+    /*
+    #vvp-member-since-display, #vvp-evaluation-date-display, #vvp-evaluation-date-tooltip-trigger {
+        text-align: center;
+    }
+
+    #vvp-member-since-display > strong::before, span#vvp-evaluation-date-string > strong::before {
+        content: "\A";
+        white-space: pre;
+    }
+    
+    div.a-column.a-span6:has(#vvp-gold-status-perks-display), div.a-column.a-span6:has(#vvp-you-are-awesome-display) {
+        width: 100%;
+    }
+
+    div.a-column.a-span6:has(#vvp-you-are-awesome-display) {
+        margin-top: 10px;
+    }*/
+    /* Fixing alignment of tooltip bubble */
+    div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
+        left: auto !important;
+    }
+
+    .vvp-account-box {
+        padding: 10px;
+    }
+
+    /*
+    #vvp-current-status-box > .a-box-inner > .a-row > .a-column.a-span6.a-span-last {
+        margin-right: 26%;
+    }*/
+    /* Fixing opt out button size */
+    #vvp-opt-out-of-vine-button {
+        display: inline-block;
+    }
+
+    #vvp-vine-agreement-link {
+        margin-left: 10px;
+    }
+
+    /*
+    #vvp-browse-nodes-container > .parent-node {
+        margin: 0 auto;
+    }
+*/
+    /* Item "See Details" button */
+    .vvp-details-btn .a-button-text {
+        padding: 0.5vmax;
+        font-size: 15px;
+    }
+
+    /**** === Device-Specific Changes === ****/
+    /* Phones in portrait (vertical) mode */
+    @media screen and (max-width: 525px) {
+        /* Account page */
+        #vvp-tax-information-container .a-section {
+            margin-right: unset;
+        }
+
+        /* Pagination fix */
+        /*
+        ul.a-pagination li a, ul.a-pagination li.a-disabled {
+            padding: 0.8rem 1.1rem 0.7rem 1.2rem;
+        }
+*/
+        /* COLLAPSIBLE CATEGORIES */
+        .vvp-items-container {
+            margin: 0rem !important;
+        }
+
+        #vvp-browse-nodes-container {
+            margin: 1rem 0rem !important;
+        }
+
+        #vvp-browse-nodes-container:not(:hover) p, #vvp-browse-nodes-container:not(:hover) .parent-node, #vvp-browse-nodes-container:not(:hover) .child-node {
+            display: none !important;
+        }
+
+        #vvp-browse-nodes-container:not(:hover):before {
+            content: "Filter Categories";
+            padding: 0.5rem;
+            line-height: 3rem;
+            color: #FFF;
+            /*
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 1;*/
+        }
+
+        #vvp-browse-nodes-container:not(:hover) {
+            background-color: #303333;
+        }
+
+        /* Product modal */
+        #vvp-product-details-img-container, #vvp-product-details-img-container img {
+            height: 75px;
+        }
+
+        /* Other */
+        /* Fixing pagination */
+        ul.a-pagination li a, ul.a-pagination li.a-disabled {
+            padding: 0.8rem 0.9rem 0.7rem 0.9rem;
+        }
+
+        /* Removing "Previous" and "Next" text */
+        ul.a-pagination li :has(.larr), ul.a-pagination li.a-last:has(.larr), ul.a-pagination li.a-disabled:has(.larr) {
+            font-size: 0px;
+        }
+
+        /* Previous button */
+        ul.a-pagination li :has(.larr), ul.a-pagination li.a-disabled:not(.a-last):has(.larr) {
+            padding: 1.35rem 0.6rem 1.35rem 1.1rem;
+        }
+
+        /* Next button */
+        .a-pagination li.a-last :has(.larr), .a-pagination li.a-last.a-disabled {
+            padding: 1.35rem 1.1rem 1.35rem 0.6rem;
+        }
+
+        ul.a-pagination li:first-child span.larr::before, ul.a-pagination li.a-last span.larr::after, ul.a-pagination li:last-child span.larr::after {
+            left: unset;
+            top: unset;
+            padding: 0.4rem;
+        }
+
+        /*
+        .a-pagination li.a-last:has(.larr) {
+            padding: 1.35rem 1.1rem 1.35rem 0.6rem;
+        }
+        */
+        ul:has(.a-disabled) > li:first-child.a-disabled:nth-last-child(2), ul > li:last-child.a-disabled:nth-last-child(2) {
+            background: blue;
+            display: none;
+        }
+
+        /* Categories */
+        /*
+        #vvp-browse-nodes-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 0px 10px;
+        }
+
+        #vvp-browse-nodes-container > p {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 1;
+        }
+        
+        #vvp-browse-nodes-container, #vvp-browse-nodes-container .parent-node, #vvp-browse-nodes-container .child-node {
+            width: unset !important;
+        }
+
+        #vvp-browse-nodes-container:has(.child-node) {
+            grid-auto-flow: dense;
+        }
+
+        .parent-node {
+            grid-column: 1 / span 2;
+        }
+
+        .parent-node:has(a.selectedNode) {
+            grid-column: 2 / span 1;
+            grid-row: 1 / span 1;
+        }
+
+        .child-node {
+            grid-column: 2 / span 1;
+        }
+*/
+        /* Resources page boxes */
+        .vvp-learning-resource--btn-container {
+            display: flex;
+        }
+
+        .vvp-learning-resource--viewed-status {
+            align-items: center;
+            display: flex;
+        }
+
+        #vvp-resources-page .a-ws div.a-column, #vvp-resources-page div.a-column {
+            min-height: 21.1rem;
+        }
+
+        .vvp-learning-resource--image {
+            height: unset;
+        }
+
+        img[src="https://m.media-amazon.com/images/G/01/Vine/VoicePortal/man-laptop.svg"] {
+            margin-top: -20px;
+        }
+
+        /* Moving ETV and Limited Quantity below the Back and Request product buttons */
+        #a-popover-content-3 {
+            /*height: inherit !important;*/
+            overflow-y: scroll;
+        }
+        /*
+        .a-popover-modal-fixed-height .a-popover-footer {
+            bottom: unset;
+            background: transparent;
+        }
+*/
+        .a-expander-partial-collapse-header {
+            position: sticky;
+        }
+
+        /*
+        .a-popover-footer {
+            background: transparent;
+        }
+        */
+        /*
+        #vvp-product-details-info-container, .a-popover-wrapper, #a-popover-3, .a-modal-scroller.a-declarative {
+            transform-style: preserve-3d;
+        }
+*/
+        #vvp-product-details-info-container:has(#vvp-product-details-modal--limited-quantity[style="display: none;"]) #vvp-product-details-modal--tax-value {
+            position: absolute !important;
+            padding-top: 0px;
+            top: 530px !important;
+            z-index: 1000;
+            display: flex;
+        }
+
+        #vvp-product-details-info-container:not(:has(#vvp-product-details-modal--limited-quantity[style="display: none;"])) #vvp-product-details-modal--tax-value {
+            position: absolute !important;
+            bottom: 15px !important;
+            z-index: 100;
+            left: 18px;
+            display: flex;
+        }
+
+        #vvp-product-details-modal--limited-quantity {
+            position: absolute !important;
+            bottom: -5px !important;
+            z-index: 100;
+            left: 18px;
+            display: flex;
+        }
+    }
+
+    @media screen and (max-width: 578px) {
+        /* Logo above Messages, Vine Help, etc. */
+        #vvp-header {
+            margin-top: 10px;
+            flex-wrap: wrap;
+            justify-content: center !important;
+        }
+
+        #vvp-logo-link > img, #vvp-about-vine-page.vvp-about-page > img {
+            margin-bottom: 10px;
+        }
+    }
+
+    /* Modal headers: 
+    #2 = messages
+    #3 = products
+    #4 = shipping address 
+    */
+    #a-popover-3 {
+        height: initial !important;
+    }
+
+    /* Fixing the shipping address box size */
+    #a-popover-4 {
+        height: initial !important;
+    }
+
+    /* For phones in portrait mode */
+    @media screen and (max-width: 690px) {
+        /* Adjusting the modal again */
+        .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
+            width: 85vmax !important;
+            max-width: 80% !important;
+        }
+
+        /* Making modal a decent size for product details box on phones */
+        .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height#a-popover-3 {
+            height: 85vmax !important;
+        }
+
+        /* Product Modal */
+        #vvp-product-details-modal--main {
+            flex-direction: column;
+        }
+
+        #vvp-product-details-img-container {
+            width: unset !important;
+            height: 150px !important;
+            display: flex !important;
+            justify-content: center !important;
+            position: relative !important;
+        }
+
+        #vvp-product-details-img-container img {
+            height: 150px !important;
+        }
+
+        /* PRODUCT MODAL */
+        .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
+            width: 85vmax !important;
+            max-height: 85% !important;
+        }
+
+        /* Remove the table column headers */
+        .vvp-reviews-table--heading-row, .vvp-orders-table--heading-row {
+            display: none !important;
+        }
+
+        /* Making reviews and order pages more viewable in portrait mode */
+        .vvp-reviews-table--row, .vvp-orders-table--row {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            align-items: center;
+            gap: 0px;
+        }
+
+        .vvp-reviews-table--row .vvp-reviews-table--image-col, .vvp-orders-table--row .vvp-orders-table--image-col {
+            grid-row: 1 / span 1;
+        }
+
+        .vvp-reviews-table--text-col:not(:has(.a-truncate, .vvp-subtitle-color)), .vvp-orders-table--text-col:not(:has(.a-truncate, .vvp-subtitle-color)) {
+            text-align: center;
+        }
+
+        /*
+        .vvp-orders-table--image-col {
+            padding: 15px !important;
+        }
+*/
+        .vvp-reviews-table--text-col:nth-child(2), .vvp-orders-table--text-col:nth-child(2):not(:has(.vvp-subtitle-color)) {
+            grid-column: 2 / span 2;
+            padding: unset;
+            height: 80%;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        /* For products that have been deleted */
+        .vvp-reviews-table--text-col:nth-child(2):has(.vvp-subtitle-color), .vvp-orders-table--text-col:nth-child(2):has(.vvp-subtitle-color) {
+            grid-column: 2 / span 1;
+            padding: unset;
+            height: 80%;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .a-truncate-full.a-offscreen {
+            display: contents;
+        }
+
+        .a-truncate-cut {
+            display: none;
+        }
+
+        .vvp-reviews-table--text-col:nth-child(3), .vvp-reviews-table--text-col:nth-child(4), .vvp-orders-table--text-col:nth-child(3), .vvp-orders-table--text-col:nth-child(4) {
+            grid-row: 2;
+            grid-column: 1 / span 3;
+            padding: 0px;
+        }
+
+        .vvp-reviews-table--actions-col, .vvp-orders-table--actions-col {
+            grid-column: 1 / span 3;
+            grid-row: 3;
+            align-items: center !important;
+        }
+
+        .a-truncate {
+            max-height: 90px !important;
+        }
+
+        span.a-truncate-cut {
+            height: auto !important;
+        }
+
+        .vvp-reviews-table--text-col[data-order-timestamp], .vvp-orders-table--text-col[data-order-timestamp] {
+            margin-right: 50%;
+        }
+
+        .vvp-reviews-table--text-col[data-review-content], .vvp-reviews-table--text-col:nth-child(4), .vvp-orders-table--text-col[data-review-content], .vvp-orders-table--text-col:nth-child(4) {
+            margin-left: 50%;
+        }
+
+        /* Originally from the 617px version */
+        /* Adding text next to order date and ETV */
+        td[data-order-timestamp]::before {
+            content: "Order date: ";
+            font-weight: 700;
+        }
+
+        td.vvp-orders-table--text-col.vvp-text-align-right::before {
+            content: "ETV: ";
+            font-weight: 700;
+        }
+
+        .vvp-reviews-table--text-col:nth-child(4)::before, .vvp-reviews-table--text-col[data-review-content]::before {
+            content: "Status: ";
+            font-weight: 700;
+        }
+
+        /*
+        .vvp-reviews-table--text-col[data-review-content] {
+            padding-top: 5px;
+        }
+        */
+    }
+
+    .a-column.a-span12.a-ws-span6:has(#vvp-current-status-box) {
+        margin-bottom: 20px;
+    }
+
+    #vvp-current-status-box, #vvp-vine-activity-metrics-box {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    #vvp-tax-interview-section > .vvp-direct-child-inline-margin {
+        display: flex;
+    }
+
+    #vvp-tax-faq-link {
+        padding-top: 13px;
+    }
+
+    /*
+    @media screen and (min-width: 640px) {
+        div.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box), div.a-column.a-span12.a-ws-span6:has(#vvp-vine-activity-metrics-box) {
+            width: 49%;
+        }
+
+        #vvp-resources-page > .a-row {
+            display: flex;
+        }
+    }*/
+    /* Maybe use this for phones in landscape (horizontal) and tablets */
+    @media screen and (max-width: 790px) {
+        .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
+            width: 85vmax !important;
+            max-width: 80% !important;
+        }
+
+        #vvp-product-details-modal--hero-image {
+            height: 75%;
+        }
+
+        #vvp-product-details-img-container {
+            width: unset;
+        }
+
+        /* Fixing the Messages layout */
+        td.vvp-messages-expander > div[data-message-id] > .a-expander-content.a-expander-inline-content.a-expander-inner.a-expander-content-expanded {
+            margin-left: -130px;
+        }
+
+        /* Aligning the top bar */
+        #a-page > div.a-container.vvp-body > div.a-tab-container.vvp-tab-set-container > ul {
+            margin-bottom: 0px !important;
+            padding-left: 0px;
+            display: flex;
+            margin: 0 auto !important;
+        }
+
+        /* Centering the Vine Items, Reviews, Orders, Account, and Resources tabs for a more mobile appearance */
+        #a-page > div.a-container.vvp-body > div.a-tab-container.vvp-tab-set-container > ul > li {
+            width: -webkit-fill-available;
+        }
+
+        ul.a-tabs .a-tab-heading a, ul.a-tabs li a {
+            text-align: center;
+            line-height: 2.75;
+            padding: unset !important;
+        }
+
+        /* Formatting RFY, AFA, AI buttons and search bar */
+        .a-section.vvp-items-button-and-search-container {
+            flex-direction: column !important;
+        }
+
+        .vvp-container-right-align {
+            margin-top: 10px !important;
+            width: 100% !important;
+            flex-grow: 1 !important;
+        }
+
+        .a-icon-search {
+            display: none;
+        }
+
+        .a-search {
+            flex-grow: 1;
+        }
+
+        #vvp-search-text-input {
+            width: 100% !important;
+        }
+
+        #vvp-items-button-container {
+            width: 100% !important;
+        }
+
+        #vvp-items-button-container .a-button-toggle.a-button {
+            margin: 0px !important;
+            padding: 0px !important;
+            width: calc(100% / 3) !important;
+            border-radius: 0px;
+        }
+
+        #vvp-items-button-container .a-button-toggle.a-button a {
+            height: 54px;
+            display: flex;
+            align-items: center;
+            padding: 0 !important;
+            justify-content: center !important;
+        }
+
+        .vvp-items-container {
+            flex-direction: column !important;
+        }
+    }
+
+    /* For phones in landscape mode and tablets */
+    @media screen and (min-width: 744px) {
+        /* Adjusting RFY, etc buttons*/
+        #vvp-items-button-container > .a-button > .a-button-inner > .a-button-text {
+            padding: 1.2rem 1.1rem 1.2rem 1.2rem;
+        }
+
+        #vvp-items-button-container > .a-button-toggle {
+            margin-bottom: 0px;
+        }
+
+        #vvp-items-grid-container {
+            margin-top: 10px;
+        }
+
+        /* Fixing search bar */
+        .a-search .a-icon-search {
+            position: relative;
+            top: 50%;
+            margin-top: 13px;
+            left: 16px;
+            display: none;
+        }
+
+        /* Category list */
+        /*
+        #vvp-browse-nodes-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        #vvp-browse-nodes-container > p {
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 1;
+        }
+
+        #vvp-browse-nodes-container > p > a {
+            font-weight: 900;
+        }
+        
+        #vvp-browse-nodes-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-flow: row;
+        }
+        */
+        /* PRODUCT MODAL */
+        .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
+            width: 85vmax !important;
+            max-height: 85% !important;
+        }
+
+        #vvp-browse-nodes-container > p {
+            margin-bottom: 0px;
+        }
+
+        #vvp-product-details-modal--main {
+            flex-direction: unset !important;
+        }
+
+        /* Accounts page */
+        /* Fixes a weird stretching issue with the two boxes */
+        div.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box), div.a-column.a-span12.a-ws-span6:has(#vvp-vine-activity-metrics-box) {
+            width: 49%;
+        }
+
+        #vvp-resources-page > .a-row {
+            display: flex;
+        }
+
+        /* Aligns the taxable value by year dropdown */
+        #vvp-tax-interview-section {
+            vertical-align: top;
+        }
     }
 
     .vvp-learning-resource--viewed-status {
@@ -423,432 +846,16 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
         display: flex;
     }
 
-    #vvp-resources-page .a-ws div.a-column, #vvp-resources-page div.a-column {
-        min-height: 21.1rem;
-    }
-
-    .vvp-learning-resource--image {
-        height: unset;
-    }
-
-    img[src="https://m.media-amazon.com/images/G/01/Vine/VoicePortal/man-laptop.svg"] {
-        margin-top: -20px;
-    }
-
-    /* Moving ETV and Limited Quantity below the Back and Request product buttons */
-    #a-popover-content-3 {
-        /*height: inherit !important;*/
-        overflow-y: scroll;
-    }
-
-    .a-popover-modal-fixed-height .a-popover-footer {
-            bottom: unset;
-            background: transparent;
-     }
-
-    .a-expander-partial-collapse-header {
-        position: sticky;
-    }
-    
-    #vvp-product-details-info-container, .a-popover-wrapper, #a-popover-3, .a-modal-scroller.a-declarative {
-        transform-style: preserve-3d;
-    }
-
-    #vvp-product-details-info-container:has(#vvp-product-details-modal--limited-quantity[style="display: none;"]) #vvp-product-details-modal--tax-value {
-        position: absolute !important;
-        padding-top: 0px;
-        top: 605px !important;
-        z-index: 1000;
-        display: flex;
-    }
-
-    #vvp-product-details-info-container:not(:has(#vvp-product-details-modal--limited-quantity[style="display: none;"])) #vvp-product-details-modal--tax-value {
-        position: absolute !important;
-        bottom: 15px !important;
-        z-index: 100;
-        left: 18px;
-        display: flex;
-    }
-
-    #vvp-product-details-modal--limited-quantity {
-        position: absolute !important;
-        bottom: -5px !important;
-        z-index: 100;
-        left: 18px;
-        display: flex;
-    }
-}
-
-@media screen and (max-width: 578px) {
-    /* Logo above Messages, Vine Help, etc. */
-    #vvp-header {
-        margin-top: 10px;
-        flex-wrap: wrap;
-        justify-content: center !important;
-    }
-
-    #vvp-logo-link > img, #vvp-about-vine-page.vvp-about-page > img {
-        margin-bottom: 10px;
-    }
-}
-
-/* Modal headers: 
-#2 = messages
-#3 = products
-#4 = shipping address 
-*/
-#a-popover-3 {
-    height: initial !important;
-}
-
-/* Fixing the shipping address box size */
-#a-popover-4 {
-    height: initial !important;
-}
-
-/* For phones in portrait mode */
-@media screen and (max-width: 690px) {
-    /* Adjusting the modal again */
-    .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
-        width: 85vmax !important;
-        max-width: 80% !important;
-    }
-
-    /* Making modal a decent size for product details box on phones */
-    .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height#a-popover-3 {
-        height: 85vmax !important;
-    }
-
-    /* Product Modal */
-    #vvp-product-details-modal--main {
-        flex-direction: column;
-    }
-
-    #vvp-product-details-img-container {
-        width: unset !important;
-        height: 150px !important;
-        display: flex !important;
-        justify-content: center !important;
-        position: relative !important;
-    }
-
-    #vvp-product-details-img-container img {
-        height: 150px !important;
-    }
-
-    /* PRODUCT MODAL */
-    .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
-        width: 85vmax !important;
-        max-height: 85% !important;
-    }
-
-    /* Remove the table column headers */
-    .vvp-reviews-table--heading-row, .vvp-orders-table--heading-row {
-        display: none !important;
-    }
-
-    /* Making reviews and order pages more viewable in portrait mode */
-    .vvp-reviews-table--row, .vvp-orders-table--row {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        align-items: center;
-        gap: 0px;
-    }
-
-    .vvp-reviews-table--row .vvp-reviews-table--image-col, .vvp-orders-table--row .vvp-orders-table--image-col {
-        grid-row: 1 / span 1;
-    }
-
-    .vvp-reviews-table--text-col:not(:has(.a-truncate, .vvp-subtitle-color)), .vvp-orders-table--text-col:not(:has(.a-truncate, .vvp-subtitle-color)) {
-        text-align: center;
-    }
-
-    /*
-    .vvp-orders-table--image-col {
-        padding: 15px !important;
-    }
-*/
-    .vvp-reviews-table--text-col:nth-child(2), .vvp-orders-table--text-col:nth-child(2):not(:has(.vvp-subtitle-color)) {
-        grid-column: 2 / span 2;
-        padding: unset;
-        height: 80%;
-        overflow: hidden;
-        margin-top: 5px;
-    }
-
-    /* For products that have been deleted */
-    .vvp-reviews-table--text-col:nth-child(2):has(.vvp-subtitle-color), .vvp-orders-table--text-col:nth-child(2):has(.vvp-subtitle-color) {
-        grid-column: 2 / span 1;
-        padding: unset;
-        height: 80%;
-        overflow: hidden;
-        margin-top: 5px;
-    }
-
-    .a-truncate-full.a-offscreen {
-        display: contents;
-    }
-
-    .a-truncate-cut {
-        display: none;
-    }
-
-    .vvp-reviews-table--text-col:nth-child(3), .vvp-reviews-table--text-col:nth-child(4), .vvp-orders-table--text-col:nth-child(3), .vvp-orders-table--text-col:nth-child(4) {
-        grid-row: 2;
-        grid-column: 1 / span 3;
-        padding: 0px;
-    }
-
-    .vvp-reviews-table--actions-col, .vvp-orders-table--actions-col {
-        grid-column: 1 / span 3;
-        grid-row: 3;
-        align-items: center !important;
-    }
-
-    .a-truncate {
-        max-height: 90px !important;
-    }
-
-    span.a-truncate-cut {
-        height: auto !important;
-    }
-
-    .vvp-reviews-table--text-col[data-order-timestamp], .vvp-orders-table--text-col[data-order-timestamp] {
-        margin-right: 50%;
-    }
-
-    .vvp-reviews-table--text-col[data-review-content], .vvp-reviews-table--text-col:nth-child(4), .vvp-orders-table--text-col[data-review-content], .vvp-orders-table--text-col:nth-child(4) {
-        margin-left: 50%;
-    }
-
-    /* Originally from the 617px version */
-    /* Adding text next to order date and ETV */
-    td[data-order-timestamp]::before {
-        content: "Order date: ";
-        font-weight: 700;
-    }
-
-    td.vvp-orders-table--text-col.vvp-text-align-right::before {
-        content: "ETV: ";
-        font-weight: 700;
-    }
-
-    .vvp-reviews-table--text-col:nth-child(4)::before, .vvp-reviews-table--text-col[data-review-content]::before {
-        content: "Status: ";
-        font-weight: 700;
-    }
-
-    /*
-    .vvp-reviews-table--text-col[data-review-content] {
-        padding-top: 5px;
-    }
-    */
-}
-
-.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box) {
-    margin-bottom: 20px;
-}
-
-#vvp-current-status-box, #vvp-vine-activity-metrics-box {
-    display: flex;
-    margin: 0 auto;
-}
-
-#vvp-tax-interview-section > .vvp-direct-child-inline-margin {
-    display: flex;
-}
-
-#vvp-tax-faq-link {
-    padding-top: 13px;
-}
-
-/*
-@media screen and (min-width: 640px) {
-    div.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box), div.a-column.a-span12.a-ws-span6:has(#vvp-vine-activity-metrics-box) {
-        width: 49%;
-    }
-
-    #vvp-resources-page > .a-row {
-        display: flex;
-    }
-}*/
-/* Maybe use this for phones in landscape (horizontal) and tablets */
-@media screen and (max-width: 790px) {
-    .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
-        width: 85vmax !important;
-        max-width: 80% !important;
-    }
-
-    #vvp-product-details-modal--hero-image {
-        height: 75%;
-    }
-
-    #vvp-product-details-img-container {
+    /* The following either work in all types of mobile devices, or haven't been tested yet */
+    ul.a-pagination, ul.a-pagination li {
         width: unset;
     }
 
-    /* Fixing the Messages layout */
-    td.vvp-messages-expander > div[data-message-id] > .a-expander-content.a-expander-inline-content.a-expander-inner.a-expander-content-expanded {
-        margin-left: -130px;
+    .vvp-tax-year-container.vvp-direct-child-inline-margin > .a-dropdown-container {
+        display: inline-flex;
     }
 
-    /* Aligning the top bar */
-    #a-page > div.a-container.vvp-body > div.a-tab-container.vvp-tab-set-container > ul {
-        margin-bottom: 0px !important;
-        padding-left: 0px;
-        display: flex;
-        margin: 0 auto !important;
+    /* Fixing order list indent issue */
+    #vvp-quick-tour-of-vine-content > ol {
+        padding: revert;
     }
-
-    /* Centering the Vine Items, Reviews, Orders, Account, and Resources tabs for a more mobile appearance */
-    #a-page > div.a-container.vvp-body > div.a-tab-container.vvp-tab-set-container > ul > li {
-        width: -webkit-fill-available;
-    }
-
-    ul.a-tabs .a-tab-heading a, ul.a-tabs li a {
-        text-align: center;
-        line-height: 2.75;
-        padding: unset !important;
-    }
-
-    /* Formatting RFY, AFA, AI buttons and search bar */
-    .a-section.vvp-items-button-and-search-container {
-        flex-direction: column !important;
-    }
-
-    .vvp-container-right-align {
-        margin-top: 10px !important;
-        width: 100% !important;
-        flex-grow: 1 !important;
-    }
-
-    .a-icon-search {
-        display: none;
-    }
-
-    .a-search {
-        flex-grow: 1;
-    }
-
-    #vvp-search-text-input {
-        width: 100% !important;
-    }
-
-    #vvp-items-button-container {
-        width: 100% !important;
-    }
-
-    #vvp-items-button-container .a-button-toggle.a-button {
-        margin: 0px !important;
-        padding: 0px !important;
-        width: calc(100% / 3) !important;
-        border-radius: 0px;
-    }
-
-    #vvp-items-button-container .a-button-toggle.a-button a {
-        height: 54px;
-        display: flex;
-        align-items: center;
-        padding: 0 !important;
-        justify-content: center !important;
-    }
-
-    .vvp-items-container {
-        flex-direction: column !important;
-    }
-}
-
-/* For phones in landscape mode and tablets */
-@media screen and (min-width: 744px) {
-    /* Adjusting RFY, etc buttons*/
-    #vvp-items-button-container > .a-button > .a-button-inner > .a-button-text {
-        padding: 1.2rem 1.1rem 1.2rem 1.2rem;
-    }
-
-    #vvp-items-button-container > .a-button-toggle {
-        margin-bottom: 0px;
-    }
-
-    #vvp-items-grid-container {
-        margin-top: 10px;
-    }
-
-    /* Fixing search bar */
-    .a-search .a-icon-search {
-        position: relative;
-        top: 50%;
-        margin-top: 13px;
-        left: 16px;
-        display: none;
-    }
-
-    /* Category list */
-    /*
-    #vvp-browse-nodes-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    #vvp-browse-nodes-container > p {
-        grid-column: 1 / span 3;
-        grid-row: 1 / span 1;
-    }
-
-    #vvp-browse-nodes-container > p > a {
-        font-weight: 900;
-    }
-
-    #vvp-browse-nodes-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-flow: row;
-    }
-    */
-    /* PRODUCT MODAL */
-    .a-popover.a-popover-modal.a-declarative.a-popover-modal-fixed-height {
-        width: 85vmax !important;
-        max-height: 85% !important;
-    }
-
-    #vvp-browse-nodes-container > p {
-        margin-bottom: 0px;
-    }
-
-    #vvp-product-details-modal--main {
-        flex-direction: unset !important;
-    }
-
-    /* Accounts page */
-    /* Fixes a weird stretching issue with the two boxes */
-    div.a-column.a-span12.a-ws-span6:has(#vvp-current-status-box), div.a-column.a-span12.a-ws-span6:has(#vvp-vine-activity-metrics-box) {
-        width: 49%;
-    }
-
-    #vvp-resources-page > .a-row {
-        display: flex;
-    }
-
-    /* Aligns the taxable value by year dropdown */
-    #vvp-tax-interview-section {
-        vertical-align: top;
-    }
-}
-
-.vvp-learning-resource--viewed-status {
-    align-items: center;
-    display: flex;
-}
-
-/* The following either work in all types of mobile devices, or haven't been tested yet */
-ul.a-pagination, ul.a-pagination li {
-    width: unset;
-}
-
-.vvp-tax-year-container.vvp-direct-child-inline-margin > .a-dropdown-container {
-    display: inline-flex;
-}
-
-/* Fixing order list indent issue */
-#vvp-quick-tour-of-vine-content > ol {
-    padding: revert;
-}
