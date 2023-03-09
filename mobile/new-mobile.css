@@ -464,9 +464,9 @@ div.a-popover.a-popover-no-header.a-declarative.a-arrow-top {
     #vvp-product-details-info-container:has(#vvp-product-details-modal--limited-quantity[style="display: none;"]) #vvp-product-details-modal--tax-value {
         position: absolute !important;
         margin: 0 auto;
-        /*bottom: 5px !important;
+        bottom: 5px !important;
         z-index: 100;
-        left: 18px;*/
+        left: 18px;
         display: flex;
         visibility: visible !important;
     }
