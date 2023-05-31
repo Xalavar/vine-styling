@@ -1,3 +1,4 @@
+
     /*** NOTES: 
     
     * The purpose of this is to make the Vine portion of Amazon work properly across various different mobile devices and tablets. 
@@ -298,11 +299,62 @@
     }
 
     /**** === Device-Specific Changes === ****/
+    /* iPhone 14 physical dimensions: 2.81in x 5.78in */
     /* Phones in portrait (vertical) mode */
-    @media screen and (max-width: 525px) {
+    /*@media screen and (max-width: 525px) {*/
+    @media screen and (max-width: 4.1in) {
         /* Account page */
         #vvp-tax-information-container .a-section {
             margin-right: unset;
+        }
+
+        .vvp-tax-year-container.vvp-direct-child-inline-margin {
+            margin-bottom: 20px;
+        }
+
+        span[data-action="vvp-voice-tax-report"] > .a-link-normal {
+            display: block;
+            margin-top: 20px;
+        }
+
+        #vvp-account-settings .vvp-direct-child-inline-margin {
+            display: grid;
+        }
+
+        #vvp-opt-out-of-vine-button {
+            margin: 5px auto;
+            display: flex;
+        }
+
+        #vvp-vine-agreement-link {
+            display: block;
+            margin: 5px auto;
+        }
+
+        /* Resources page boxes */
+        .vvp-learning-resource--btn-container {
+            display: flex;
+        }
+
+        .vvp-learning-resource--viewed-status {
+            align-items: center;
+            display: flex;
+        }
+
+        #vvp-resources-page .a-ws div.a-column, #vvp-resources-page div.a-column {
+            min-height: 21.1rem;
+        }
+
+        .vvp-learning-resource--image {
+            height: unset;
+        }
+
+        img[src="https://m.media-amazon.com/images/G/01/Vine/VoicePortal/man-laptop.svg"] {
+            margin-top: -20px;
+        }
+
+        #vvp-ready-to-order-btn {
+            display: inline-flex;
         }
 
         /* Pagination fix */
@@ -414,28 +466,6 @@
             grid-column: 2 / span 1;
         }
 */
-        /* Resources page boxes */
-        .vvp-learning-resource--btn-container {
-            display: flex;
-        }
-
-        .vvp-learning-resource--viewed-status {
-            align-items: center;
-            display: flex;
-        }
-
-        #vvp-resources-page .a-ws div.a-column, #vvp-resources-page div.a-column {
-            min-height: 21.1rem;
-        }
-
-        .vvp-learning-resource--image {
-            height: unset;
-        }
-
-        img[src="https://m.media-amazon.com/images/G/01/Vine/VoicePortal/man-laptop.svg"] {
-            margin-top: -20px;
-        }
-
         /* Moving ETV and Limited Quantity below the Back and Request product buttons */
         #a-popover-content-3 {
             /*height: inherit !important;*/
@@ -584,6 +614,10 @@
             height: 80%;
             overflow: hidden;
             margin-top: 5px;
+        }
+        
+        ul.a-tabs .a-tab-heading a, ul.a-tabs li a {
+            font-size: 1.75vmax;
         }
 
         /* For products that have been deleted */
@@ -761,6 +795,7 @@
             align-items: center;
             padding: 0 !important;
             justify-content: center !important;
+            text-align: center;
         }
 
         .vvp-items-container {
